@@ -1,0 +1,467 @@
+body {
+  color: #a7a37e;
+  background-color: #000000;
+}
+
+h1 {
+  color: #002f2f;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+h3 {
+  color: #ffffff;
+}
+
+h4 {
+  color: #ffffff;
+}
+
+blockquote {
+  color: #444; /* Bryan changed this from color: #e6e2af; */
+}
+
+.content strong {
+  color: #000;
+}
+
+.stack {
+  border-color: #000000;
+}
+
+ul {
+  color: #fff;
+}
+
+.menu-dropdown ul.menu .menu li {
+  border-color: #a7a37e;
+  background-color: #000000;
+}
+
+.menu-dropdown .menu .menu .first > a {
+  background-color: transparent;
+}
+
+.stack-preheader {
+  background-color: #000000;
+}
+
+.stack-preheader .menu li a {
+}
+
+.wrapper-header {
+  background-color: #002f2f;
+}
+
+.rotating-banner .rb-slide {
+  border-color: #ffffff;
+}
+
+.stack-precontent {
+}
+
+.stack-prefooter {
+}
+
+.stack-content-inner {
+}
+
+#forum tbody {
+}
+
+#block-feedback-feedback a {
+  color: #ffffff;
+  background-color: #002f2f;
+}
+
+.faq-item-question-label {
+  color: #000000;
+  background-color: #002f2f;
+}
+
+.node-faq-item .content {
+  background-color: #000000;
+}
+
+.page-testimonials .simpleview .content .node-testimonial {
+  color: #e6e2af;
+}
+
+.node + .node-article,.node + .node-blog {
+  background-color: transparent;
+}
+
+.node .meta {
+  color: #e6e2af;
+}
+
+.node-unpublished {
+}
+
+.ui-datepicker th {
+}
+
+.wysiwyg-allowed {
+}
+
+.messages,.messages ul,.messages ul li {
+  color: #000000;
+}
+
+a {
+  color: #046380;
+}
+
+a:visited {
+  color: #046380;
+}
+
+li a.active {
+  color: #046380;
+}
+
+button {
+  color: #046380;
+  border-color: #a7a37e;
+}
+
+input.form-submit {
+  color: #046380;
+  border-color: #a7a37e;
+}
+
+.rotating-banner a {
+  color: #046380;
+}
+
+a:active {
+  color: #ffffff;
+}
+
+h2 a {
+  color: #ffffff;
+}
+
+h2 a:link {
+  color: #ffffff;
+}
+
+h2 a:visited {
+  color: #ffffff;
+}
+
+.sidebar h2 {
+  color: #ffffff;
+}
+
+#site-name a {
+  color: #ffffff;
+}
+
+.stack-content-inner .block h2 {
+  color: #ffffff;
+}
+
+.menu li a:active {
+  color: #ffffff;
+}
+
+.menu li .active {
+  color: #ffffff;
+}
+
+.breadcrumb a:hover {
+  color: #ffffff;
+}
+
+#forum th {
+  color: #ffffff;
+}
+
+#forum th a {
+  color: #ffffff;
+}
+
+table th {
+  color: #000;
+}
+
+.faq-item-inline-question-title a {
+  color: #ffffff;
+}
+
+
+a:hover {
+  color: #D76B00; /* Bryan changed this from #e6e2af */
+}
+
+.stack-navigation .menu a:hover {
+  color: #ffffff;   /* Bryan changed this from color: #e6e2af; */
+}
+
+h2 a:hover {
+  color: #D76B00; /* Bryan changed this from #e6e2af */
+}
+
+h5 {
+  color: #000; /* Bryan changed this from #e6e2af */
+}
+
+h6 {
+  color: #000; /* Bryan changed this from #e6e2af */
+}
+
+.stack-slogan {
+  color: #000; /* Bryan changed this from #e6e2af */
+}
+
+dt {
+  color: #000; /* Bryan changed this from #e6e2af */
+}
+
+intro {
+  color: #000; /* Bryan changed this from #e6e2af */
+}
+
+block {
+  color: #e6e2af; /* Bryan changed this from #e6e2af */
+}
+
+.breadcrumb {
+  color: #e6e2af;
+}
+
+.breadcrumb a {
+  color: #D76B00; /* Bryan changed this from #e6e2af */
+}
+
+#forum tr td.last-reply {
+  color: #000; /* Bryan changed this from #e6e2af */
+}
+
+#forum tr td.created {
+  color: #000; /* Bryan changed this from #e6e2af */
+}
+
+li a.active:hover {
+  color: #e6e2af;
+}
+
+.comment h3 a {
+  color: #000; /* Bryan changed this from #e6e2af */
+}
+
+.field-name-field-testimonial-author {
+  color: #000; /* Bryan changed this from #e6e2af */
+}
+
+.block h2 {
+  color: #002f2f;
+}
+
+.controls.numbers a.activeSlide {
+  color: #002f2f;
+}
+
+#site-name a:hover {
+  color: #ffffff;    /* Bryan changed this from color: #a7a37e; */
+}
+
+.field-name-field-testimonial-affiliation {
+  color: #a7a37e;
+}
+
+.menu li a {
+  color: #003471; /* Bryan changed this. The old one was = color: #a7a37e; */
+}
+
+.rotating-banner {
+}
+
+.controls.buttons a.activeSlide {
+  background-color: #002f2f;
+}
+
+.comment.odd {
+  background-color: #FFF; /* bryan changed this from #000000 */
+}
+
+#block-feedback-feedback a:hover {
+}
+
+.stack-navigation ul.menu .menu li {
+  border-color: #ffffff;
+}
+
+.comment,.block-aggregator ul li {
+}
+
+.menu-dropdown .menu .expanded:hover > a {
+  color: #e6e2af;
+}
+
+.menu-dropdown .menu .active-trail > a {
+  color: #ffffff;
+}
+
+.menu-dropdown .menu .active-trail:hover > a {
+  color: #e6e2af;
+}
+
+.menu-dropdown .menu .menu li:hover > a {
+  color: #e6e2af;
+}
+
+.menu-dropdown .menu .menu a.active {
+  color: #ffffff;
+}
+
+.menu-dropdown .menu .menu li:hover > .active {
+  color: #ffffff;
+}
+
+.menu-dropdown .menu .menu .active-trail > a {
+  color: #ffffff;
+}
+
+.menu-dropdown .menu .menu .active-trail:hover > a {
+  color: #e6e2af;
+}
+
+pre {
+}
+
+
+#header {
+  color: #ffffff;
+}
+
+#banner-region {
+  color: #000000;
+}
+
+#preheader {
+  color: #ffffff;
+}
+
+#precontent .stack-width {
+  background-color: #ffffff;
+}
+
+#site-slogan-stack .stack-width {
+  background-color: #ffffff;
+}
+
+#banner .stack-width {
+  background-color: #ffffff;
+}
+
+#sidebar-b {
+  color: #000000;
+}
+
+#footer-inner {
+  color: #ffffff;
+}
+
+#page-title {
+  color: #000000;
+}
+
+#content tr {
+  background-color: transparent;
+}
+
+#content h2 {
+  color: #000000;
+}
+
+#content h3 {
+  color: #000000;
+}
+
+#content ul {
+  color: #000000;
+}
+
+#footer-inner h2 {
+  color: #ffffff;
+}
+
+#copyright p {
+  color: #ffffff;
+}
+
+#main .node {
+  background-color: #ffffff;
+}
+
+#header-region #site-name a:hover {
+  color: #ffffff;
+}
+
+#content {
+  background-color: transparent;
+}
+
+#content-inner {
+  background-color: transparent;
+}
+
+#main h1 a {
+  color: #000000;
+}
+
+/* added by bryan */
+#main h2 a {
+  color: #000000;
+}
+
+#sidebar-a h2 {
+  color: #000000;
+}
+
+#main {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+#header-region #site-slogan {
+  color: #ffffff;
+}
+
+#prefooter h2 {
+  color: #ffffff;
+}
+
+#sidebar-a {
+  color: #000000;
+}
+
+.comment-wrapper {
+  color: #000000;
+  background-color: #ffffff;
+}
+
+.comment-wrapper .comment {
+  background-color: #ffffff;
+}
+
+#prefooter {
+  color: #ffffff;
+}
+
+#navigation-region .level-1 a:hover {
+  color: #ffffff;
+}
+
+#navigation-region .level-1 .active {
+  color: #ffffff;
+}
+
+#content-inner .box {
+  background-color: #ffffff;
+}
+
