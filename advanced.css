@@ -13,65 +13,6 @@ list-style: none;
 border-radius: 5px 5px 5px 5px;
 }
 
-/* for forms -- recommented by bryan since all my forms were hopelessly busted, style-wise
-
-#content #body-add-more-wrapper .form-item label {
-display: block;
-float: none;
-font-weight: bold;
-margin-right: 10px;
-text-align: right;
-width: 140px;
-font-size: 12px;
-line-height: 35px;
-}
-
-#content .form-item label{
-text-shadow: 1px 1px 1px #fffffff;
-display: block;
-float: left;
-font-weight: bold;
-margin-right: 10px;
-text-align: right;
-width: 140px;
-font-size: 12px;
-line-height: 35px;}
-
-#content .form-item input{
-font-family:Century Gothic,Myriad Pro,Arial,Helvetica,sans-serif;
-font-size: 14px;
-padding-left: 5px;
-width: auto;
-height: 25px;
-border-radius: 5px;
-border: 1px solid #b9bdc1;
-}
-
-#content textarea {
-font-family:Century Gothic,Myriad Pro,Arial,Helvetica,sans-serif;
-font-size: 14px;
-padding-left: 5px;
-width: auto;
-border-radius: 5px;
-border: 1px solid #b9bdc1;
-}
-
-.grippie{
-width: 0px;
-margin-left: -1000px;
-}
-
-#edit-copy {
-float: left;
-}
-
-#edit-submit{
-display: block;
-margin-left: auto;
-margin-right: auto;
-}
-*/
-
 /* for precontent bottom box */
 #site-slogan-stack .stack-width {
 border-radius: 8px 8px 8px 8px;
@@ -89,7 +30,3 @@ box-shadow: 0 3px 3px rgba(255, 255, 255, 0.1), 0 2px 0 #BBBBBB, 0 0 0 #AAAAAA, 
 border-radius: 8px 8px 8px 8px;
 box-shadow: 0 3px 3px rgba(255, 255, 255, 0.1), 0 2px 0 #BBBBBB, 0 0 0 #AAAAAA, 0 3px 3px #444444;
 }
-
-/* fix header
-#header-region .site-name-wrapper {width: 930px;}
-#header-region .site-slogan-wrapper {width: 930px;} */

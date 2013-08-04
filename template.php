@@ -3,15 +3,23 @@
 /*
  * Implement hook_preprocess_html().
  */
-function acq_rebrauned5_1_preprocess_html(&$vars) {
-  $vars['classes_array'][] = 'theme-markup-2';
-  $vars['classes_array'][] = _acq_rebrauned5_1_get_layout();
+function rebrauned_preprocess_html(&$vars) {
+
+  // Add a theme-specific css class to the body tag.
+  $vars['classes_array'][] = 'rebrauned';
+  $vars['classes_array'][] = _rebrauned_get_layout();
+  
+  // Add css for our fonts.
+  drupal_add_css(
+    'http://fonts.googleapis.com/css?family=Vollkorn:400italic,400,700|Oswald',
+    array('type' => 'external')
+  );
 }
 
 /**
  * Implements hook_html_head_alter().
  */
-function acq_rebrauned5_1_html_head_alter(&$head_elements) {
+function rebrauned_html_head_alter(&$head_elements) {
   // If the theme's info file contains the custom theme setting
   // default_favicon_path, change the favicon <link> tag to reflect that path.
   if (($default_favicon_path = theme_get_setting('default_favicon_path')) && theme_get_setting('default_favicon')) {
@@ -37,7 +45,7 @@ function acq_rebrauned5_1_html_head_alter(&$head_elements) {
 * Implements hook_preprocess_page().
 */
 
-function acq_rebrauned5_1_preprocess_page(&$variables) {
+function rebrauned_preprocess_page(&$variables) {
   $is_front = $variables['is_front'];
   // Adjust the html element that wraps the site name. h1 on front page, p on other pages
   $variables['wrapper_site_name_prefix'] = ($is_front ? '<h1' : '<p');
@@ -56,7 +64,7 @@ function acq_rebrauned5_1_preprocess_page(&$variables) {
   }
   
   //Arrange the elements of the main content area (content and sidebars) based on the layout class
-  $layoutClass = _acq_rebrauned5_1_get_layout();
+  $layoutClass = _rebrauned_get_layout();
   $layout = substr(strrchr($layoutClass, '-'), 1); //Get the last bit of the layout class, the 'abc' string
   
   $contentPos = strpos($layout, 'c');
@@ -75,7 +83,7 @@ function acq_rebrauned5_1_preprocess_page(&$variables) {
 /**
  * Implement hook_preprocess_block().
  */
-function acq_rebrauned5_1_preprocess_block(&$vars) {
+function rebrauned_preprocess_block(&$vars) {
   $vars['content_attributes_array']['class'][] = 'content';
 }
 
@@ -91,7 +99,7 @@ function acq_rebrauned5_1_preprocess_block(&$vars) {
  * @return <mixed>
  *   The value associated with the specified key, or the default value.
  */
-function _acq_rebrauned5_1_variable_get($key, $default) {
+function _rebrauned_variable_get($key, $default) {
   global $theme;
   $themes_info =& drupal_static(__FUNCTION__);
   if (!isset($themes_info[$theme])) {
@@ -117,8 +125,8 @@ function _acq_rebrauned5_1_variable_get($key, $default) {
  * @return <string>
  *   The name of the layout associated with the current page.
  */
-function _acq_rebrauned5_1_get_layout() {
-  $layout_patterns = _acq_rebrauned5_1_variable_get('layout', array('<global>' => 'body-layout-fixed-ca'));
+function _rebrauned_get_layout() {
+  $layout_patterns = _rebrauned_variable_get('layout', array('<global>' => 'body-layout-fixed-ca'));
   $global_layout = $layout_patterns['<global>'];
   unset($layout_patterns['<global>']);
 
@@ -136,7 +144,7 @@ function _acq_rebrauned5_1_get_layout() {
 /**
  * Implements hook_node_view_alter().
  */
-function acq_rebrauned5_1_node_view_alter(&$build) {
+function rebrauned_node_view_alter(&$build) {
   if (isset($build['links']) && isset($build['links']['comment']) &&
     isset($build['links']['comment']['#attributes']) &&
     isset($build['links']['comment']['#attributes']['class'])) {
@@ -155,7 +163,7 @@ function acq_rebrauned5_1_node_view_alter(&$build) {
 /**
  * Implements hook_preprocess_forum_topic_list
  */
-function acq_rebrauned5_1_preprocess_forum_topic_list(&$vars) {
+function rebrauned_preprocess_forum_topic_list(&$vars) {
   // Recreate the topic list header
   $list = array(
     array('data' => t('Topic'), 'field' => 'f.title'),
@@ -176,8 +184,30 @@ function acq_rebrauned5_1_preprocess_forum_topic_list(&$vars) {
 /*
  * Implements hook_preprocess_media_gallery_license().
  */
-function acq_rebrauned5_1_preprocess_media_gallery_license(&$vars) {
+function rebrauned_preprocess_media_gallery_license(&$vars) {
   if (in_array($vars['element']['#view_mode'], array('media_gallery_thumbnail', 'media_gallery_detail'))) {
     $vars['color'] = 'light';
   }
+}
+
+/**
+ * Implements hook_preprocess_node().
+ *
+ * Reformat date info.
+ */
+function rebrauned_preprocess_node(&$variables) {
+  // Use Drupal's format_date function to reformat dates.
+  $variables['clean_date'] = format_date($variables['created'], 'custom', 'F d, Y');
+}
+
+/**
+ * Implements hook_preprocess_comment().
+ *
+ * Clean up the default comment meta info.
+ */
+function rebrauned_preprocess_comment(&$variables) {
+  $comment = $variables['comment'];
+  // Use Drupal's format_date function to reformat dates for the <time> element.
+  $clean_date = format_date($comment->created, 'custom', 'F d, Y');
+  $variables['clean_date'] = $clean_date;
 }

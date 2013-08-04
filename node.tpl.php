@@ -50,6 +50,7 @@
  * - $zebra: Outputs either "even" or "odd". Useful for zebra striping in
  *   teaser listings.
  * - $id: Position of the node. Increments each time it's output.
+ * - $clean_date: A friendlier date format.
  *
  * Node status variables:
  * - $view_mode: View mode, e.g. 'full', 'teaser'...
@@ -93,7 +94,7 @@
     <?php if ($display_submitted) : ?>
       <div class="meta">
         <div class="submitted"><?php print t('Submitted by') ?> <span class="username"><?php print $name; ?></span> </div>
-        <div class="created"><?php print t('on'); ?> <span class="date"><?php print $date; ?></span></div>
+        <div class="created clean-date"><span class="date"><?php print $clean_date; ?></span></div>
       </div>
     <?php endif; ?>
 

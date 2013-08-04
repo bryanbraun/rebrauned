@@ -25,7 +25,7 @@ del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend {
+fieldset, form, label, legend {a
   background: transparent;
   border: 0;
   font-size: 1em;
@@ -69,7 +69,7 @@ p,
 ul, ol, dl,
 form, table,
 address, blockquote, del, hr, pre, ins, noscript, center {
-  margin-top: 1.3846em; /* 18px margin-top */
+  margin-bottom: 1.3846em; /* 18px margin-top */
   width: auto;
 }
 
@@ -151,53 +151,6 @@ blockquote cite:before {
 
 /* @end */
 
-/* @group Headings */
-
-h1, h2, h3 { /* Base 13px font size for headings */
-  font-weight: normal;
-}
-
-h1 {
-  font-size: 2.3077em; /* 30px (16:1.875) */
-  line-height: 1.2em; /* 36px (16:2.25) */
-  margin-top: 0.6em; /* 18px */
-}
-
-h2 {
-  font-size: 1.8462em; /* 24px (16:1.5) */
-  line-height: 1.25em; /* 30px (16:1.875) */
-  margin-top: 0.75em; /* 18px */
-}
-
-h3 {
-  font-size: 1.3846em; /* 18px (16:1.125) */
-  line-height: 1.3333em; /* 24px (16:1.5) */
-  margin-top: 1em; /* 18px (16:1.125)*/
-}
-
-h4 {
-  font-size: 1.0769em; /* 14px (16:0.875) */
-  line-height: 1.5em; /* 21px (16:1.3125) */
-  margin-top: 1.2857em; /* 18px */
-}
-
-h5, h6 {
-  font-size: 0.9231em; /* 12px (16:0.75) */
-  line-height: 1.5em; /* 18px (16:1.125) */
-  margin-top: 1.5em; /* 18px (16:1.125) */
-}
-
-h1:first-child,
-h2:first-child,
-h3:first-child,
-h4:first-child,
-h5:first-child,
-h6:first-child {
-  margin-top: 0;
-}
-
-/* @end */
-
 /* @group Inline Elements */
 
 /* Listed but not used currently
@@ -262,13 +215,13 @@ label.option,
   display: inline-block;
   font-weight: bold;
   margin-right: 0.2308em;
-  width: 9em;
+  /* width: 9em; */
   vertical-align: top;
 }
 
 fieldset label.option,
 fieldset .webform-container-inline label {
-  width: 8em;
+  /* width: 8em;*/
 }
 
 .form-checkboxes label,
@@ -713,11 +666,15 @@ div.contextual-links-wrapper {
 
 .block ul { /* System Overrides */
   margin-bottom: 0;
-  margin-top: 1.3846em; /* 18px margin-top, intended for ULs not in sidebars */
+  margin: 1.7em 0; /* 18px margin-top, intended for ULs not in sidebars */
   padding-bottom: 0;
   padding-left: 2.3846em; /* 16px */ /* was 1.3846, changed by bryan */
   padding-right: 0;
   padding-top: 0;
+}
+
+.block-menu ul.menu {
+margin: 0;
 }
 
 .block ul ul,
@@ -1164,8 +1121,9 @@ ul ul ul li.leaf {
 }
 
 .comment ul.links.inline {
-  padding-top: 0.6923em;
-  margin-bottom: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
 }
 
 .user-picture {
@@ -2045,8 +2003,16 @@ float: none;
 
 /* for blogs */
 
+#content-area .bryan-blog .blog-foreword.big-foreword{
+  font-size: 28px;
+  margin: 24px 0 30px 0;
+}
+
+#content-area .bryan-blog .blog-foreword.small-foreword {
+  font-size: 16px;
+}
+
 #content-area .bryan-blog .blog-foreword {
-  font-size: 1.4em;
   font-family: 'Volkorn', Georgia, serif;
   color: #ADADAD;
   margin-top: -1em;
@@ -2056,6 +2022,10 @@ float: none;
   font-family: 'Volkorn', Georgia, serif;
   color: #9D9D9D;
   text-decoration: underline;
+}
+
+#content-area .bryan-blog .blog-foreword a:hover {
+  text-decoration: none;
 }
 
 /* For Book Reviews View */

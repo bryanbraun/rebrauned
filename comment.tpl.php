@@ -2,7 +2,7 @@
 
 /**
  * @file
- * Local theme implementation of comments.tpl.php.
+ * Local theme implementation of comment.tpl.php.
  *
  * Available variables:
  * - $author: Comment author. Can be link or plain text.
@@ -20,6 +20,7 @@
  * - $permalink: Comment permalink.
  * - $picture: Authors picture.
  * - $signature: Authors signature.
+ * - $clean_date: Cleaned up option for comment date (by Bryan)
  * - $status: Comment status. Possible values are:
  *   comment-unpublished, comment-published or comment-preview.
  * - $title: Linked title.
@@ -65,13 +66,9 @@
       <span class="new"><?php print $new ?></span>
     <?php endif; ?>
   
-    <?php print render($title_prefix); ?>
-    <h3<?php print $title_attributes; ?>><?php print $title ?></h3>
-    <?php print render($title_suffix); ?>
-  
     <div class="meta">
     <span class="submitted">
-      <span class="date"><?php print $created; ?></span> &mdash; <span class="author"><?php print $author; ?></span>
+      <span class="author"><?php print $author; ?></span><span class="clean-date"><?php print $clean_date; ?></span>
     </span>
     </div>
   

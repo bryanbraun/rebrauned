@@ -1,24 +1,3 @@
-body {
-  color: #a7a37e;
-  background-color: #000000;
-}
-
-h1 {
-  color: #002f2f;
-}
-
-h2 {
-  color: #ffffff;
-}
-
-h3 {
-  color: #ffffff;
-}
-
-h4 {
-  color: #ffffff;
-}
-
 blockquote {
   color: #444; /* Bryan changed this from color: #e6e2af; */
 }
@@ -45,14 +24,12 @@ ul {
 }
 
 .stack-preheader {
-  background-color: #000000;
 }
 
 .stack-preheader .menu li a {
 }
 
 .wrapper-header {
-  background-color: #002f2f;
 }
 
 .rotating-banner .rb-slide {
@@ -160,27 +137,17 @@ h2 a:visited {
   color: #ffffff;
 }
 
-.stack-content-inner .block h2 {
-  color: #ffffff;
-}
-
 .menu li a:active {
   color: #ffffff;
+  text-shadow: 1px 2px #ccc;
 }
 
 .menu li .active {
   color: #ffffff;
+  text-shadow: 1px 2px #ccc;
 }
 
 .breadcrumb a:hover {
-  color: #ffffff;
-}
-
-#forum th {
-  color: #ffffff;
-}
-
-#forum th a {
   color: #ffffff;
 }
 
@@ -199,6 +166,7 @@ a:hover {
 
 .stack-navigation .menu a:hover {
   color: #ffffff;   /* Bryan changed this from color: #e6e2af; */
+  text-shadow: 1px 2px #aaa;
 }
 
 h2 a:hover {
@@ -235,14 +203,6 @@ block {
 
 .breadcrumb a {
   color: #D76B00; /* Bryan changed this from #e6e2af */
-}
-
-#forum tr td.last-reply {
-  color: #000; /* Bryan changed this from #e6e2af */
-}
-
-#forum tr td.created {
-  color: #000; /* Bryan changed this from #e6e2af */
 }
 
 li a.active:hover {
@@ -284,10 +244,6 @@ li a.active:hover {
   background-color: #002f2f;
 }
 
-.comment.odd {
-  background-color: #FFF; /* bryan changed this from #000000 */
-}
-
 #block-feedback-feedback a:hover {
 }
 
@@ -296,38 +252,6 @@ li a.active:hover {
 }
 
 .comment,.block-aggregator ul li {
-}
-
-.menu-dropdown .menu .expanded:hover > a {
-  color: #e6e2af;
-}
-
-.menu-dropdown .menu .active-trail > a {
-  color: #ffffff;
-}
-
-.menu-dropdown .menu .active-trail:hover > a {
-  color: #e6e2af;
-}
-
-.menu-dropdown .menu .menu li:hover > a {
-  color: #e6e2af;
-}
-
-.menu-dropdown .menu .menu a.active {
-  color: #ffffff;
-}
-
-.menu-dropdown .menu .menu li:hover > .active {
-  color: #ffffff;
-}
-
-.menu-dropdown .menu .menu .active-trail > a {
-  color: #ffffff;
-}
-
-.menu-dropdown .menu .menu .active-trail:hover > a {
-  color: #e6e2af;
 }
 
 pre {
@@ -344,18 +268,6 @@ pre {
 
 #preheader {
   color: #ffffff;
-}
-
-#precontent .stack-width {
-  background-color: #ffffff;
-}
-
-#site-slogan-stack .stack-width {
-  background-color: #ffffff;
-}
-
-#banner .stack-width {
-  background-color: #ffffff;
 }
 
 #sidebar-b {
@@ -395,7 +307,7 @@ pre {
 }
 
 #main .node {
-  background-color: #ffffff;
+/*  background-color: #ffffff; */
 }
 
 #header-region #site-name a:hover {
@@ -424,7 +336,6 @@ pre {
 }
 
 #main {
-  background-color: #ffffff;
   color: #000000;
 }
 
@@ -442,11 +353,6 @@ pre {
 
 .comment-wrapper {
   color: #000000;
-  background-color: #ffffff;
-}
-
-.comment-wrapper .comment {
-  background-color: #ffffff;
 }
 
 #prefooter {
@@ -461,7 +367,10 @@ pre {
   color: #ffffff;
 }
 
-#content-inner .box {
-  background-color: #ffffff;
+#content-inner .box,
+#precontent .stack-width,
+#site-slogan-stack .stack-width,
+#banner .stack-width {
+  background-color: #fdfdfd;
+  background-image: url('images/subtle_texture_white50.png');
 }
-

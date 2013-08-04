@@ -1,6 +1,6 @@
 /** 
 * @file
-* Initial style definition of the Impact theme for Acquia Gardens.
+* Styles.
 * 
 * @see default.css
 */
@@ -14,25 +14,22 @@ body {
   line-height: 2.8em; /* 27px */
 }
 
-/* commented by bryan to see if it looks better without */
-/*
-p,
-ul, ol, dl,
-form, table,
-address, blockquote, q, del, hr, pre, code, ins, noscript {
-  margin-top: 2.0769em; 
+h1:first-child,
+h2:first-child,
+h3:first-child,
+h4:first-child,
+h5:first-child,
+h6:first-child {
+  margin-top: 0;
 }
-*/
-/* @end */
 
-/* @group Typography */
-
+h1,
 h2,
 h3,
 h4,
 h5,
-h6 { 
-  font-weight: normal;
+h6 {
+  margin: 1em 0;
 }
 
 h1 a,
@@ -46,35 +43,64 @@ h6 a,
 }
 
 h1 {
-  font-size: 40px; /* Bryan changed this from 36px */
-  line-height: 48px;
-  margin: 60px 0px; /* Bryan changed from margin-top 27*/
+  font-size: 48px; /* Bryan changed this from 36px */
+  line-height: 54px;
 }
 
 h2 {
-  font-size: 36px;  /* Bryan changed this from 22px */
-  line-height: 36px;
-  margin: 50px 0px;  /* Bryan changed from margin-top 27*/
+  font-size: 34px;  /* Bryan changed this from 22px */
+  line-height: 40px;
 }
 
 h3 {
-  font-size: 22px; /* Bryan changed this from 20px */
+  font-size: 30px; /* Bryan changed this from 20px */
   line-height: 34px;
-  margin: 42px 0px;  /* Bryan changed from margin-top 27*/
 }
 
 h4 {
-  font-size: 18px;
+  font-size: 26px;
   line-height: 32px;
-  margin: 34px 0px;  /* Bryan changed from margin-top 27*/
 }
 
-h5,
-h6 {
-  font-size: 14px;
+h5 {
+  font-size: 20px;
   line-height: 28px;
-  margin: 28px 0px;  /* Bryan changed from margin-top 27*/
 }
+
+h6 {
+  font-size: 20px;
+  line-height: 28px;
+  font-style: italic;
+}
+
+.wrapper-content h2,
+.wrapper-content h3,
+.wrapper-content h4,
+.wrapper-content h5,
+.wrapper-content h6 {
+  font-family: 'Tahoma', Helvetica, sans-serif;
+  font-weight: bold;
+}
+
+/* headings using google fonts */
+/*#header #header-inner,
+#prefooter h2,
+#footer-inner h2, */
+.block-block h2,
+.block-views h2,
+#navigation .menu,
+.wrapper-content h1 {
+  font-family: "Oswald", Impact, sans-serf;
+}
+
+#content p,
+#content ul,
+#content ol,
+#content table {
+  font-family: 'Vollkorn', Georgia, serif;
+}
+
+
 
 a,
 a:active,
@@ -104,16 +130,12 @@ a:visited {
 
 .site-name {
   padding: 30px 0;
-  /* styles below were added by Bryan */
   font-size: 140px;
   line-height: 82px;
   text-align: center;
-  /* font-weight: bold;
-
-    font-size: 42px;    -- removed by Bryan
-       line-height: 42px;
-       font-family: Georgia,New Century Schoolbook,Nimbus Roman No9 L,serif;
-  */
+  margin: 0;
+  font-family: "Oswald", Impact, sans-serf;
+  font-weight: normal;
 }
 
 .stack-slogan .box {
@@ -205,8 +227,6 @@ ol {
   padding-left: 3em; /* changed from 2.5em by bryan */
 }
 
-/*#### added by bryan ####*/
-
 ol li, ul li {
 font-size: 1.3em;
 }
@@ -214,10 +234,6 @@ font-size: 1.3em;
 #content-area ol li, #content-area ul li {
 font-size: 1.8em;
 }
-
-
-/*########################*/
-
 
 
 dl {
@@ -251,117 +267,6 @@ dd {
 }
 
 /* @end */
-
-/* @group Dropdown */
-
-.menu-dropdown .menu .expanded + li {
-  margin-left: 0;
-}
-
-.menu-dropdown .menu .menu {
-  height: auto;
-  padding-top: 10%;
-  top: 100%;
-}
-
-.menu-dropdown ul.menu .menu li { /* ul.menu prevents IE7 from interpreting .menu .menu as just .menu */
-  background-image: none;
-  border-style: solid;
-  border-width: 0 1px;
-}
-          
-.menu-dropdown .menu .menu .last {
-  border-bottom-width: 1px;
-}
-
-.menu-dropdown .menu .menu .first {
-  background-attachment: scroll;
-  background-image: url("images/nav-cap.png");
-  background-position: left top;
-  background-repeat: no-repeat;
-  border-left-width: 0;
-  border-right-width: 0;
-  padding-left: 2px;
-}
-
-.menu-dropdown .menu .menu .first .menu {
-  padding-top: 0;
-  margin-left: 1px;
-}
-
-.menu-dropdown .menu .menu .menu {
-  padding-top: 0;
-  top: -5px;
-}
-
-.menu-dropdown .menu .menu .menu .menu {
-  margin-left: 0;
-  top: -1px;
-}
-
-.menu-dropdown .menu .menu .menu .first {
-  background-image: none;
-  border-left-width: 1px;
-  border-right-width: 1px;
-  border-top-width: 1px;
-  padding-left: 0;
-}
-
-.menu-dropdown .menu .expanded a {
-  padding-right: 36px; /* LTR */
-}
-
-.menu-dropdown .menu .menu a {
-  font-size: 0.9286em;
-  line-height: 1.1538em;
-  margin-left: 1px;
-  padding: 1.3846em 1.8462em 0;
-  width: auto;
-}
-
-.menu-dropdown .menu .menu .first > a {
-  background-attachment: scroll;
-  background-color: transparent;
-  background-image: url("images/nav-cap.png");
-  background-position: right top;
-  background-repeat: no-repeat;
-}
-
-.menu-dropdown .menu .menu .menu a {
-  background: none;
-}
-
-.menu-dropdown .menu .menu .first > a {
-  padding-top: 1.6923em;
-}
-
-.menu-dropdown .menu .menu .last > a {
-  padding-bottom: 1.6923em;
-}
-
-.menu-dropdown .menu li > a > .more-indicator {
-  height: 5px;
-  right: 20px; /* LTR */
-  top: 0.75em;
-  width: 9px;
-}
-
-.menu-dropdown .menu .menu li > a > .more-indicator {
-  height: 9px;
-  top: 1.6923em;
-  width: 5px;
-}
-
-.menu-dropdown .menu .menu .first > a > .more-indicator {
-  top: 1.9231em;
-}
-
-
-/* @end */
-
-/* @end */
-
-/* @group Regions  */
 
 /* @group Preheader */
 
@@ -402,20 +307,6 @@ dd {
   border-top: none;
 }
 
-.stack-header-inner {
-  background: url(images/header-image-foreground.png) 130% 0;
-  margin-bottom: -2px;
-}
-
-.stack-header-inner .inset-1 {
-  background: url(images/header-image-bkg.png) 70%;
-  width: 100%;
-}
-
-.stack-header-inner .inset-2 {
-  background: url(images/pre-header-edge.png) repeat-x left top;
-}
-
 .stack-header-inner .inset-3 {
   text-align: center;
 }
@@ -433,14 +324,6 @@ dd {
 /* @end */
 
 /* @group Navigation */
-
-.stack-navigation  {
-  background: url(images/header-glow.png) repeat-x left top;
-  border-top: none;
-  min-height: 16px;
-  padding-bottom: 20px;
-  padding-top: 30px;
-}
 
 .stack-navigation h2 {
   display: none;
@@ -549,10 +432,6 @@ dd {
 
 /* @end */
 
-/* @end */
-
-/* @group Blocks */
-
 /* @group Top menu */
 
 .stack-preheader .block h2 {
@@ -578,68 +457,6 @@ ul.action-links {
 
 .item-list ul li + li, .menu li + li {
   margin-top: 0;
-}
-
-/* @end */
-
-/* @group Forum */
-
-#forum table {
-  width: 100%;
-}
-
-#forum div.indent {
-  margin-left: 0;
-}
-
-#forum tbody {
-  border-style: solid;
-  border-width: 2px 0 1px;
-  
-}
-
-#forum tr td.forum {
-  background: none;
-  padding-left: 10px;
-  width: 60%;
-}
-
-#forum tr td.topics,
-#forum tr td.posts,
-#forum tr td.replies {
-  width: 10%;
-}
-
-#forum tr td.last-reply,
-#forum tr td.created {
-  width: 20%;
-}
-
-#forum tr + tr {
-  border-top: 1px dotted #666666;
-}
-
-#forum tr.even {
-  background: #121212;
-  border-bottom: none;
-}
-
-#forum tr.odd {
-  background: none;
-  border-bottom: none;
-}
-
-#forum tr th {
-  border-bottom: none;
-  font-size: 16px;
-  font-family: "Helvetica Neue" ,Helvetica, Arial, sans-serif;
-  padding: 3px 10px;
-}
-
-#forum tr td {
-  height: 40px;
-  padding: 3px 10px;
-  vertical-align: middle;
 }
 
 /* @end */
@@ -706,168 +523,9 @@ tbody tr.even {
 
 /* @end */
 
-/* @group Mailing List */
-
-.block-mailing-list .form-item input.form-text {
-  border: 2px solid #CCCCCC;
-  -moz-border-radius: 4px;
-  -webkit-border-radius: 4px;
-  -o-border-radius: 4px;
-  border-radius: 4px;
-  height: 1.5em;
-}
-
-/* @end */
-
-/* @group FAQ */
-
-.node-faq-item + .node-faq-item {
-  margin-top: 18px;
-}
-
-.faq-item-question-label {
-  -moz-border-radius: 6px;
-  -o-border-radius: 6px;
-  -webkit-border-radius: 6px;
-  border-radius: 6px;
-  float: left;
-  font-family: Georgia,New Century Schoolbook,Nimbus Roman No9 L,serif;
-  font-size: 22px;
-  font-style: italic;
-  line-height: 0.8em;
-  padding: 3px 5px 5px;
-}
-
-.faq-item-inline-question-title {
-  font-size: 14px;
-}
-
-.node-faq-item .faq-item-inline-question-title {
-  margin-top: 4px;
-}
-
-.node-faq-item .content {
-  padding: 10px 12px;
-}
-
-.node-faq-item .content p:first-child {
-  margin-top: 0;
-}
-
 .float-overflow {
   overflow: hidden;
 }
-
-/* @end */
-
-/* @group Aggregator */
-
-.block-aggregator ul {
-  list-style: none;
-  padding: 0;
-}
-
-.block-aggregator ul li {
-  border-bottom: 1px dotted;
-  padding: 0.5em;
-}
-
-.block-aggregator ul li.first {
-  padding-top: 0;
-}
-
-/* @end */
-
-/* @Customer */
-
-.simpleview-teasers .node-customer {
-  float: left;
-  height: auto;
-  margin: 0 2%;
-  width: 29%;
-}
-
-.simpleview-teasers .node-customer .field-name-body {
-  display: none;
-}
-
-.simpleview-teasers .node-customer img {
-  width: 100%;
-  height: auto;
-}
-
-/* @end */
-
-/* @group Testimonials */
-
-.simpleview .node-testimonial .field,
-.simpleview .node-testimonial p:first-child {
-  margin-top: 0;
-}
-
-.block .simpleview .node-testimonial .quote-top .slide-right {
-  background: url(images/dark-quote.png) no-repeat right top;
-  height: 14px;
-  padding-right: 61px;
-}
-
-.block .simpleview .node-testimonial .quote-top .slide-left {
-  background: url(images/dark-quote.png) no-repeat left -18px;
-  height: 14px;
-}
-
-.block .simpleview .node-testimonial .quote-bottom .slide-right {
-  background: url(images/dark-quote.png) no-repeat right -40px;
-  height: 20px;
-  padding-right: 61px;
-}
-
-.block .simpleview .node-testimonial .quote-bottom .slide-left {
-  background: url(images/dark-quote.png) no-repeat left -61px;
-  height: 20px;
-}
-
-.block .simpleview .node-testimonial .content-right {
-  background: url(images/dark-quote-content-right.png) repeat-y top right;
-  height: 100%;
-  padding-right: 14px;
-}
-
-.block .simpleview .node-testimonial .content-left {
-  background: url(images/dark-quote-content-left.png) repeat-y top left;
-  height: 100%;
-  padding-left: 14px;
-}
-
-.field-name-field-testimonial-author,
-.field-name-field-testimonial-affiliation {
-  float: right;
-  margin-left: 0.3em;
-}
-
-.page-testimonials .simpleview .content .node-testimonial {
-  margin-bottom: 10px;
-  margin-top: 0;
-  width: 45%;
-}
-
-.page-testimonials .simpleview .content .node-testimonial .field-name-body {
-  font-family: Georgia,New Century Schoolbook,Nimbus Roman No9 L,serif;
-  font-style: italic;
-}
-
-.page-testimonials .simpleview .content .node-testimonial.even {
-  clear: both;
-  float: left;
-  margin-right: 5%;
-}
-
-.page-testimonials .simpleview .content .node-testimonial.odd {
-  float: right;
-  margin-left: 4.5%; /* A concession to IE7 that this isn't 5% */
-}
-
-/* @end */
 
 /* @group Product Feature */
 
@@ -896,10 +554,9 @@ tbody tr.even {
 }
 
 .comment {
-  border-style: dotted;
-  border-width: 1px 0 0;
   margin-top: 0;
-  padding: 12px 6px 9px;
+  padding: 34px 6px 20px;
+  border-top: 1px solid #ccc;
 }
 
 .comment .user-picture {
@@ -916,7 +573,7 @@ tbody tr.even {
 }
 
 .comment h3 {
-  margin-top: 0;
+  margin: 0;
 }
 
 .node .links.actions,
@@ -935,10 +592,10 @@ tbody tr.even {
 .divider {  /* divider selector added by bryan */
   background-attachment: scroll;
   background-color: transparent;
-  background-image: url("images/horizontal-scroll.png");
+ /* background-image: url("images/horizontal-scroll.png"); */
   background-position: center 20px; /* changed from top center , by bryan */
   background-repeat: no-repeat;
-  margin-top: 24px;
+ /* margin-top: 24px; */
   padding-top: 90px; /* increased by bryan */
 }
 
@@ -947,12 +604,10 @@ tbody tr.even {
 }
 
 .node .meta span {
-  font-size: 14px;
-  font-weight: 300;
+  /* font-weight: 300; */
 }
 
 .node .meta div {
-  font-size: 12px;
   font-weight: 400;
 }
 
@@ -1143,40 +798,9 @@ input.form-submit {
 
 /* White */
 
-a:active {
-  color: #FFFFFF;
-}
-
-h2 {
-  color: #FFFFFF;
-}
-
-h2 a {
-  color: #FFFFFF;
-}
-
-h2 a:link {
-  color: #FFFFFF;
-}
-
-h2 a:visited {
-  color: #FFFFFF;
-}
-
-.sidebar h2 {
-  color: #FFFFFF;
-}
-
-h4 {
-  color: #FFFFFF;
-}
-
 #site-name a {
   color: #FFFFFF;
-}
-
-.stack-content-inner .block h2 {
-  color: #FFFFFF;
+  text-shadow: 1px 2px #aaa;
 }
 
 .menu li a:active {
@@ -1211,144 +835,10 @@ table th {
   color: #FFFFFF;
 }
 
-/****** Removing all the green colors -- relics from the old site style 
-
-/* Light Green */ /*
-
-a:hover {
-  color: #D3FEC1;
-}
-
-.stack-navigation .menu a:hover {
-  color: #D3FEC1;
-}
-
-h2 a:hover {
-  color: #D3FEC1;
-}
-
-h3 {
-  color: #D3FEC1;
-}
- 
-h5 {
-  color: #D3FEC1;
-}
-
-h6 {
-  color: #D3FEC1;
-}
-
-blockquote {
-  color: #D3FEC1;
-}
-
-.stack-slogan {
-  color: #D3FEC1;
-}
-
-ul {
-  color: #D3FEC1;
-}
-
-dt {
-  color: #D3FEC1;
-}
-
-intro {
-  color: #D3FEC1;
-}
-
-block {
-  color: #D3FEC1;
-}
-
-.breadcrumb {
-  color: #D3FEC1;
-}
-
-.breadcrumb a {
-  color: #D3FEC1;
-}
-
-#forum tr td.last-reply {
-  color: #D3FEC1;
-}
-
-#forum tr td.created {
-  color: #D3FEC1;
-}
-
-li a.active:hover {
-  color: #D3FEC1;
-}
-
-.node .meta {
-  color: #D3FEC1;
-}
-
-.comment h3 a {
-  color: #D3FEC1;
-}
-
-.field-name-field-testimonial-author {
-  color: #D3FEC1;
-}
-
-.page-testimonials .simpleview .content .node-testimonial {
-  color: #D3FEC1;
-}
-*/ /* Dark Green */ /*
-
-h1 {
-  color: #62A734;
-}
-
-.block h2 {
-  color: #62A734;
-}
-
-.controls.numbers a.activeSlide {
-  color: #62A734;
-}
-
-**************/ /* Light Grey */
-
-body {
-  color: #CCCCCC;
-}
-
-#site-name a:hover {
-  color: #CCCCCC;
-}
-
-.field-name-field-testimonial-affiliation {
-  color: #CCCCCC;
-}
-
-/* Grey */ 
-
-.menu li a {
-  color: #CCCCCC;
-}
-
-.rotating-banner {
-  color: #CCCCCC;
-}
-
-/* Charcoal */
-
-.faq-item-question-label {
-  color: #121212;
-}
-
-/* @end */
-
 /* @group Backgrounds */
 
 /* Green */
 .wrapper-header {
-  background-color: #62A734;
 }
 
 .controls.buttons a.activeSlide {
@@ -1363,23 +853,6 @@ body {
   background-color: #62A734;
 }
 
-/* Charcoal --- Removing these relics from the old theme
-body {
-  background-color: #121212;
-}
-
-.node-faq-item .content {
-  background-color: #121212;
-}
-
-.stack-preheader {
-  background-color: #121212;
-}
-
-.comment.odd {
-  background-color: #121212;
-}
-*/
 /* White */
 
 input.form-submit {
@@ -1415,7 +888,6 @@ button {
 }
 .comment,
 .block-aggregator ul li {
-  border-color: #333333;
 }
 
 input.form-submit {
@@ -1436,73 +908,6 @@ button {
 
 /* @end */
 
-/* @group Dropdown */
-
-.menu-dropdown .menu .expanded:hover > a {
-  color: #D3FEC1;
-}
-
-.menu-dropdown .menu .active-trail > a {
-  color: #ffffff;
-}
-
-.menu-dropdown .menu .active-trail:hover > a {
-  color: #D3FEC1;
-}
-
-.menu-dropdown .menu .menu li:hover > a {
-  color: #D3FEC1;
-}
-
-.menu-dropdown .menu .menu a.active {
-  color: #ffffff;
-}
-
-.menu-dropdown .menu .menu li:hover > .active {
-  color: #ffffff;
-}
-
-.menu-dropdown .menu .menu .active-trail > a {
-  color: #ffffff;
-}
-
-.menu-dropdown .menu .menu .active-trail:hover > a {
-  color: #D3FEC1;
-}
-
-/* @end */
-
-/* @group Non-palette Colors */
-/* first one commented by bryan */
-/*
-pre {
-  background-color:#292929;
-}
-*/
-.stack-precontent {
-  background-color: #161616;
-}
-
-.stack-prefooter {
-  background-color: #161616;
-}
-
-.stack-content-inner {
-  background-color: #161616;
-}
-
-.rotating-banner {
-  color: #333333;
-}
-
-#forum tbody {
-  border-color: #666666;
-}
-
-.menu-dropdown ul.menu .menu li {
-  background-color: #121212;
-}
-
 /* Bryan's Change for acquia page */
 
 #precontent div.content a:hover img.acquia-snippet {
@@ -1516,18 +921,10 @@ box-shadow: 0px 0px 5px 4px #D76B00;
 border: 2px solid black;
 }
 
+.center-that {
+  text-align: center;
+}
 
-/* @end */
-
-/* @group Transparencies */
-
-/* @end */
-
-/* @end */
-
-/* @group IE */
-
-/* @group IE6 */
 
 /* @end */
 
@@ -1541,11 +938,5 @@ border: 2px solid black;
 #gardens_ie7 .col-align-last-right.horizontal .col:first-child .menu li {
   display: inline;
 }
-
-/* @end */
-
-/* @group IE8 */
-
-/* @end */
 
 /* @end */
