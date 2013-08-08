@@ -137,5 +137,24 @@
   Drupal.behaviors.acquia.checkThemeBuilderStatus = function () {   
     return $('body').hasClass('themebuilder') ? true : false;
   };
+    
+  /**
+   * Toggle mobile menu.
+   */
+  Drupal.behaviors.rebrauned = {
+    attach: function (context, settings) {
+      $('.stack-navigation h2', context).hide();
+      $('.stack-navigation h2', context).click(function() {
+        $('.stack-navigation .menu').slideToggle();
+      });
+      
+      // Solve the disappearing menu bug.
+      $(window).resize(function() {
+        if ($(window).width() <= 680) {
+          $('.stack-navigation .menu').attr('style','');
+        };
+      });
+    }
+  }; 
   
 }(jQuery));

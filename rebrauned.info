@@ -9,7 +9,6 @@ stylesheets[all][] = 'defaults.css'
 stylesheets[all][] = 'style.css'
 stylesheets[all][] = 'palette.css'
 stylesheets[all][] = 'custom.css'
-stylesheets[all][] = 'advanced.css'
 stylesheets[all][] = 'font-families.css'
 
 scripts[] = 'local.js'

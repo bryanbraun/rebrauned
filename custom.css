@@ -177,6 +177,7 @@ font-size: 1.15em;
 
 #navigation-region .block {
   padding-bottom: 12px;
+  margin-right: 6px;
 }
 
 .page {
@@ -248,6 +249,10 @@ font-size: 1.15em;
   line-height: 1.1;
   margin-bottom: 14px;
   font-size: 18px;
+}
+
+.stack-prefooter .block ul {
+padding-left: 0;
 }
 
 #main a {
@@ -400,6 +405,35 @@ font-size: 1.4em;
   text-decoration: none;
 }
 
+/* remove footer bullets */
+#footer li {
+list-style: none;
+}
+
+.messages {
+border-radius: 5px 5px 5px 5px;
+}
+
+/* all 3d styles on 'cards' */
+#content .box {
+    margin: 0 16px;
+    border-radius: 8px;
+    box-shadow: 0 3px 3px rgba(255,255,255,0.1),0 0 0 #BBBBBB,0 4px 0 #AAAAAA,0 3px 3px #444444;
+    background-color: #fdfdfd;
+    background-image: url(/sites/all/themes/rebrauned/images/subtle_texture_white50.png);
+}
+
+/* override the bottom one so it tucks under the footer */
+#content-inner .box {
+border-radius: 8px 8px 0px 0px;
+}
+
+/* override the messages one */
+#messages .box {
+box-shadow: none;
+background: none;
+}
+
 /**
  * Style checkbox filters 
  */
@@ -432,4 +466,120 @@ margin-left: 10px;
 .view-display-id-blog_archives .view-filters {
 line-height: 1em;
 font-size: 18px;
+}
+
+/* Responsive Styles */
+
+img {
+  max-width: 100%;
+}
+
+@media all and (max-width: 940px) {
+
+  #main {
+    padding: 10px;
+  }
+
+  .site-name {
+    font-size: 115px;
+  }
+}
+
+/* tweak points */
+@media all and (max-width: 830px) {
+
+  .site-name {
+    font-size: 100px;
+  }
+
+  .logo img {
+    width: 170px;
+    height: auto;
+  }
+}
+
+@media all and (max-width: 740px) {
+  .logo img {
+    width: 150px;
+    height: auto;
+  }
+}
+
+/* mobile-ish */
+@media all and (max-width: 680px) {
+  .site-name {
+    text-align: center;
+    font-size: 75px;
+    padding: 0 0 16px 0;
+  }
+  
+  .logo {
+    float: none;
+    text-align: center;
+    display: block;
+    margin: 0;
+  }
+  
+  .stack-navigation h2 {
+    display: block !important;
+    text-align: center;
+    color: white;
+    font-size: 2em;
+  }
+
+  .col-3 .col {
+    width: 100%;
+  }
+
+  .col-3 .col img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .stack-navigation .menu a {
+    width: 100%;
+    display: block;
+    padding: 20px 0;
+  }
+  .stack-navigation .menu {
+    text-align: center;
+    width: 100%;
+    display: none;
+  }
+
+  .stack-navigation .menu li {
+    width: 100%;
+    float: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  #main p {
+    font-size: 1.4em;
+  }
+  h1 {
+    font-size: 40px; /* Bryan changed this from 36px */
+  }
+
+  h2 {
+    font-size: 28px;  /* Bryan changed this from 22px */
+  }
+
+  h3 {
+    font-size: 24px; /* Bryan changed this from 20px */
+  }
+
+  h4 {
+    font-size: 18px;
+  }
+
+  h5 {
+    font-size: 16px;
+  }
+
+  h6 {
+    font-size: 16px;
+    font-style: italic;
+  }
 }

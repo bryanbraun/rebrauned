@@ -366,11 +366,3 @@ pre {
 #navigation-region .level-1 .active {
   color: #ffffff;
 }
-
-#content-inner .box,
-#precontent .stack-width,
-#site-slogan-stack .stack-width,
-#banner .stack-width {
-  background-color: #fdfdfd;
-  background-image: url('images/subtle_texture_white50.png');
-}

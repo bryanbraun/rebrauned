@@ -14,6 +14,27 @@ function rebrauned_preprocess_html(&$vars) {
     'http://fonts.googleapis.com/css?family=Vollkorn:400italic,400,700|Oswald',
     array('type' => 'external')
   );
+  
+  // Set up meta tags.
+  // Modern IE & chrome-frame rendering engine tag.
+  $rendering_meta = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'http-equiv' => 'X-UA-Compatible',
+      'content' => 'IE=edge,chrome=1',
+    ),  
+  );
+  // Mobile viewport tag.
+  $mobile_meta = array(
+    '#tag' => 'meta',
+    '#attributes' => array(
+      'name' => 'viewport',
+      'content' => 'width=device-width',
+    ),
+  );
+ // Include meta tags.
+  drupal_add_html_head($rendering_meta, 'rendering_meta');
+  drupal_add_html_head($mobile_meta, 'responsive_meta');
 }
 
 /**
