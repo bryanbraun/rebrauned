@@ -558,6 +558,13 @@ img {
   #main p {
     font-size: 1.4em;
   }
+  #content-area ol li,
+  #content-area ul li {
+    font-size: 1.4em;
+  }
+  body {
+    line-height: 2.2em;
+  }
   h1 {
     font-size: 40px; /* Bryan changed this from 36px */
   }
