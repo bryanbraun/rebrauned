@@ -122,6 +122,9 @@ a:visited {
 #main .content #contact-me:active{
   background-position: 0 -100px;
 }
+#main li {
+  padding-bottom: 0.7em;
+}
 
 .site-name {
   padding: 30px 0;
