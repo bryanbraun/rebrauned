@@ -25,7 +25,7 @@ del, dfn, em, font, img, ins, kbd, q, s, samp,
 small, strike, strong, sub, sup, tt, var,
 b, u, i, center,
 dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend {a
+fieldset, form, label, legend {
   background: transparent;
   border: 0;
   font-size: 1em;
@@ -58,13 +58,6 @@ caption, th, td {
 /* @group HTML Elements */
 
 /* @group Block Elements */
-
-body {
-  /* 36px block height for one line of content (including top margin) */
-  font-size: 0.8125em; /* 13px base font */
-  line-height: 1.3846em; /* 18px line height */
-}
-
 p,
 ul, ol, dl,
 form, table,
@@ -78,9 +71,13 @@ pre {
   border-style: solid;
   border-width: 1px;
   border-color: #f0f0f0;
-  font-size: 1.5em;  /* changed by bryan from 1.041em */
-  line-height: 1.6363em; 
+  font-size: 1.25em;  /* changed by bryan from 1.041em */
+  line-height: 1.4; 
   padding: 0.2727em;
+}
+
+.codetable pre {
+  font-size: 1.1em;
 }
 
 ul,
@@ -302,9 +299,11 @@ table {
   width: 100%;
 }
 
-th {
-  padding-bottom: 0.8462em;
-  padding-top: 1em;
+th,
+td {
+  border: solid 1px #ccc;
+  padding: 8px 8px;
+  vertical-align: top;
 }
 
 thead th { /* System Override */
@@ -313,23 +312,6 @@ thead th { /* System Override */
 
 tbody {
   border: medium none;
-}
-
-td {
-  padding-bottom: 0.7692em;
-  padding-top: 0.8462em;
-}
-
-th:first-child,
-td:first-child {
-  padding-left: 1.0769em;
-  padding-right: 1.0769em;
-}
-
-th + th,
-td + td {
-  padding-left: 0.4615em;
-  padding-right: 1.0769em;
 }
 
 tr.even, tr.odd {
@@ -344,12 +326,6 @@ table br + br { /* remove superfluous line-breaks */
 /* @end */
 
 /* @group Typography */
-
-.site-name {
-  font-size: 2.3077em; /* 30px (16:1.875) */
-  line-height: 1.2em; /* 36px */
-}
-
 .site-name a,
 .site-name a:hover {
   text-decoration: none;
@@ -802,7 +778,8 @@ ul ul ul li.leaf {
 }
 
 .horizontal .menu li {
-  float: left;
+  display: inline-block;
+  
 }
 
 .horizontal .menu li,
@@ -824,11 +801,6 @@ ul ul ul li.leaf {
 .horizontal .menu li + li.expanded,
 .horizontal .menu li + li.collapsed {
   margin-top: 0;
-}
-
-.col-align-last-right .last .menu,
-.col-align-right.horizontal .menu {
-  float: right;
 }
 
 .col-align-last-right .last .menu .menu,
@@ -1062,7 +1034,7 @@ ul ul ul li.leaf {
 
 .comment-wrapper {
   clear:both;
-  padding-top: 2em;
+  /* padding-top: 2em; */
 }
 
 .comment-wrapper > a[id] { /* This solves a very nasty bug in Gecko, IE and Safari with handling of overflow:hidden */
@@ -1985,15 +1957,15 @@ body.wire {
 /* for social links */
 
 div#block-on-the-web-0.block div.inner div.middle div.content {
-  float: right;
+float: right;
 }
 
 /* for child menus */
 
 li.dhtml-menu ul.menu li {
-  font-size: .6em;
-  margin: 20px 0 0 -15px;
-  float: none;
+font-size: .6em;
+margin: 20px 0 0 -15px;
+float: none;
 }
 
 /* hide all breadcrumbs */
@@ -2005,7 +1977,7 @@ li.dhtml-menu ul.menu li {
 
 #content-area .bryan-blog .blog-foreword.big-foreword{
   font-size: 28px;
-  margin: 0px 0 30px 0;
+  margin: 0 0 30px 0;
   line-height: 1.3;
 }
 
@@ -2029,12 +2001,22 @@ li.dhtml-menu ul.menu li {
   text-decoration: none;
 }
 
-/* For Book Reviews View */
-.book-reviews .view-header {
-  font-size: 1.8em;
-  font-family: 'Volkorn', Georgia, serif;
+.subscribe-below {
+  text-align: center;
+  font-size: 1.4em;
+  font-family: 'Vollkorn', Georgia, serif;
+  color: #ADADAD;
+  padding-top: 2.7em;
+  border-top: 1px solid #ccc;
+  margin-top: 1em;
 }
 
+#content-area .subscribe-link:link,
+#content-area .subscribe-link:visited {
+  color: #d76b00;
+}
+
+/* For Book Reviews View */
 .book-reviews h2 {
   font-size: 1.9em;
   line-height: 1em;
@@ -2076,6 +2058,10 @@ li.dhtml-menu ul.menu li {
 #footer .view {
   font-size: 1.3em;
   margin-top: 20px;
+}
+
+.gist {
+  line-height: 1.2;
 }
 
 /* @end */

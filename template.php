@@ -213,10 +213,23 @@ function rebrauned_preprocess_media_gallery_license(&$vars) {
 
 /**
  * Implements hook_preprocess_node().
- *
- * Reformat date info.
  */
 function rebrauned_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $type = $node->type;
+  
+  switch ($type) {
+    case 'article':
+    	// For providing an RSS link underneath each article.
+        // Determine the tag id for the 'blog' vocabulary, and use it to specify an RSS feed.
+        $tid = $node->field_blog['und'][0]['tid'];
+        // Previously, I'd link to the web-dev rss feed from individual web-dev articles, but now, I just want to link to the
+        // front page feed. Commenting the conditional line out for now and replacing it with a hardcoded feed url.
+        // $rss_url = ($tid == 83 ? 'http://feeds.feedburner.com/bryanbraun' : 'http://feeds.feedburner.com/bryanbraun-web-dev');
+        $rss_url = 'http://feeds.feedburner.com/bryanbraun';
+        $variables['rss_url'] = $rss_url;
+    break;
+  }
   // Use Drupal's format_date function to reformat dates.
   $variables['clean_date'] = format_date($variables['created'], 'custom', 'F d, Y');
 }
@@ -231,4 +244,16 @@ function rebrauned_preprocess_comment(&$variables) {
   // Use Drupal's format_date function to reformat dates for the <time> element.
   $clean_date = format_date($comment->created, 'custom', 'F d, Y');
   $variables['clean_date'] = $clean_date;
+}
+
+/**
+ * Implements hook_textfield().
+ *
+ * For resizing anonymous comment areas. See http://drupal.stackexchange.com/a/21669.
+ */
+function rebrauned_textfield($variables) {
+  $new_size = 75;
+  $variables['element']['#attributes']['size'] = $new_size;
+
+  return theme_textfield(array('element' => $variables['element']));
 }

@@ -1,5 +1,5 @@
 name = 'rebrauned'
-description = 'Designed for events, microsites.'
+description = 'The theme used for bryanbraun.com'
 version = '1.24'
 core = '7.x'
 engine = 'phptemplate'

@@ -51,6 +51,7 @@
  *   teaser listings.
  * - $id: Position of the node. Increments each time it's output.
  * - $clean_date: A friendlier date format.
+ * - $rss_url: An rss url (defined in template.php) based on the 'blog' vocabulary
  *
  * Node status variables:
  * - $view_mode: View mode, e.g. 'full', 'teaser'...
@@ -130,7 +131,22 @@
     <?php endif; ?>
     
   </div>
-
+  
+  <?php if($type == 'article') : ?>
+    <div class="subscribe-below">
+      <form class="subscribe-form clearfix" action="http://feedburner.google.com/fb/a/mailverify" method="post" target="popupwindow" onsubmit="window.open('http://feedburner.google.com/fb/a/mailverify?uri=bryanbraun', 'popupwindow', 'scrollbars=yes,width=550,height=520');return true">
+        <div class="subscribe-text">
+          <p>If you liked this, subscribe to get notified of future posts:</p>
+        </div>
+        <input class="subscribe" type="text" placeholder="Email Address" name="email">
+        <input type="hidden" value="bryanbraun" name="uri"><input type="hidden" name="loc" value="en_US">
+        <button class="subscribe-button" type="submit" value="Subscribe">Subscribe</button>
+      </form>
+    
+      <!-- <span>Want more? <a href="<?php print $rss_url ?>" class="subscribe-link">Subscribe</a> to get notified of future posts.</span> -->
+    </div>
+  <?php endif; ?>
+  
   <?php
     if (isset($content['links']['comment'])) {
       hide($content['links']['comment']);

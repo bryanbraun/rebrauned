@@ -99,16 +99,6 @@ li a.active {
   color: #046380;
 }
 
-button {
-  color: #046380;
-  border-color: #a7a37e;
-}
-
-input.form-submit {
-  color: #046380;
-  border-color: #a7a37e;
-}
-
 .rotating-banner a {
   color: #046380;
 }
@@ -139,12 +129,12 @@ h2 a:visited {
 
 .menu li a:active {
   color: #ffffff;
-  text-shadow: 1px 2px #ccc;
+  text-shadow: 1px 1px #aaa;
 }
 
 .menu li .active {
   color: #ffffff;
-  text-shadow: 1px 2px #ccc;
+  text-shadow: 1px 1px #aaa;
 }
 
 .breadcrumb a:hover {

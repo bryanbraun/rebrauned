@@ -32,15 +32,6 @@
   padding-bottom: 15px;
 }
 
-#header-region #site-name a {
-  font-size: 1.3em;
-}
-
-#main #edit-submit {
-  border-color: #006577;
-  color: #006577;
-}
-
 #messages {
   padding-top: 0px;
   border-top-width: 0px;
@@ -56,6 +47,15 @@ body {
   background-color: rgba(109, 208, 247, 0.4);
   background-image: url('images/subtle_texture.png');
   margin-bottom: 0px;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0;
 }
 
 #content-inner .box {
@@ -161,11 +161,6 @@ body {
 
 #main {
   padding: 40px 75px;
-/*  font-family: 'Helvetica Neue','Helvetica','Arial','sans-serif'; */
-}
-
-#main table td {
-font-size: 1.15em;
 }
 
 #header-region #site-name {
@@ -260,7 +255,13 @@ padding-left: 0;
 }
 
 #main p {
-  font-size: 1.7em;
+  font-size: 1.4em;
+  line-height: 1.5;
+}
+
+#main table p {
+  font-size: 1em;
+  line-height: 1.4;
 }
 
 #main a:hover {
@@ -313,17 +314,20 @@ font-family: 'Tahoma', Helvetica, sans-serif;
 Color: #000;
 }
 
-#main .comment .content p {
-font-size: 1.6em;
-margin-bottom: 1em;
-}
-
 .clean-date {
 text-align: center;
 font-size: 1.4em;
 font-family: 'Vollkorn', Georgia, serif;
 color: #ADADAD;
 margin-bottom: 1.7em;
+}
+
+.logo {
+  display: none;
+}
+
+.region-navigation .menu {
+  text-align: center;
 }
 
 /* For Views Gallery*/
@@ -355,18 +359,29 @@ margin-bottom: 1.7em;
 
 /* Minor comment form customizations */
 .comment-form .form-item, .form-actions {
-margin: 0 0 12px 0;
+  margin: 0 0 12px 0;
 }
 .comment-form .form-item .description {
-line-height: 1em;
+  line-height: 1.5;
+  font-size: 12px;
+  color: #999;
 }
 .comment-form .form-item label {
-display: block;
-line-height: 15px;
+  display: block;
+  line-height: 1.5;
 }
 .comment-form .form-item input, .comment-form textarea {
-margin: 0px;
-font-size: 12px
+  margin: 0px;
+  background-color: white;
+  border-left: 1px solid rgba(100, 100, 100, 0.22);
+  border-right: 1px solid rgba(100, 100, 100, 0.22);
+  border-bottom: 1px solid rgba(100, 100, 100, 0.22);
+  border-top: 1px solid transparent;
+  border-radius: 2px;
+  box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.4);
+  padding: 6px 0 2px 6px;
+  min-height: 30px;
+  font-size: 16px;
 }
 
 /**
@@ -464,8 +479,76 @@ margin: 0 auto 60px;
 margin-left: 10px;
 }
 .view-display-id-blog_archives .view-filters {
-line-height: 1em;
 font-size: 18px;
+}
+/* one-off page styles */
+#node-321 ul li {
+  line-height: 1.4;
+  list-style-type: none;
+}
+.view-recent-blog-posts .divider {
+    padding-top: 36px;
+}
+/* Email Subscribe */
+.subscribe-form {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.subscribe-text {
+    max-width: 220px;
+    float: left;
+    text-align: left;
+}
+#main .subscribe-text p {
+    font-size: 17px;
+    line-height: 1.3;
+    margin: 0;
+}
+.subscribe {
+    background-color: white;
+    border-left: 1px solid rgba(100, 100, 100, 0.22);
+    border-right: 1px solid rgba(100, 100, 100, 0.22);
+    border-bottom: 1px solid rgba(100, 100, 100, 0.22);
+    border-top: 1px solid transparent;
+    border-radius: 2px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.4);
+    padding: 6px 0 2px 6px;
+    min-height: 30px;
+    width: 200px;
+    float: left;
+    margin: 0 20px;
+    font-size: 16px;
+}
+.subscribe-button {
+    height: 38px;
+    line-height: 35px;
+    border: 0;
+    border-radius: 3px;
+    margin: 1px 0 0 0;
+    font-size: 14px;
+    color: #fff;
+    background-color: #a7a37e;
+    vertical-align: middle;
+    width: 120px;
+    float: left;
+    display: inline-block;
+}
+.subscribe-button:hover {
+    background-color: #8E8A6B;
+    cursor: pointer;
+}
+.subscribe-below {
+  padding-top: 5em;
+  margin-bottom: 4em;
+  clear: both;
+}
+
+/* comment links */
+.node-article ul.links {
+  margin: 0;
+}
+#content-area .node-article ul.links li {
+  padding-bottom: 0;
 }
 
 /* Responsive Styles */
@@ -475,35 +558,11 @@ img {
 }
 
 @media all and (max-width: 940px) {
-
   #main {
     padding: 10px;
   }
-
-  .site-name {
-    font-size: 115px;
-  }
 }
 
-/* tweak points */
-@media all and (max-width: 830px) {
-
-  .site-name {
-    font-size: 100px;
-  }
-
-  .logo img {
-    width: 170px;
-    height: auto;
-  }
-}
-
-@media all and (max-width: 740px) {
-  .logo img {
-    width: 150px;
-    height: auto;
-  }
-}
 
 /* mobile-ish */
 @media all and (max-width: 680px) {
@@ -513,18 +572,12 @@ img {
     padding: 0 0 16px 0;
   }
   
-  .logo {
-    float: none;
-    text-align: center;
-    display: block;
-    margin: 0;
-  }
-  
   .stack-navigation h2 {
     display: block !important;
     text-align: center;
     color: white;
     font-size: 2em;
+    text-shadow: 1px 1px #aaa;
   }
 
   .col-3 .col {
@@ -561,9 +614,6 @@ img {
   #content-area ol li,
   #content-area ul li {
     font-size: 1.4em;
-  }
-  body {
-    line-height: 2.2em;
   }
   h1 {
     font-size: 40px; /* Bryan changed this from 36px */
